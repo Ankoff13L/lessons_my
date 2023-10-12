@@ -4,18 +4,22 @@
 # dir(my_list)
 
 
-def test(x, y):
-    return x + y
+# def test(x, y):
+#     return x + y
 
-# if __name__ == "__main__":
+## if __name__ == "__main__":
+##     res = test(1, 2)
+##     print(f"test: {res} | __name__: {__name__}")
+
+
+# def main():
 #     res = test(1, 2)
 #     print(f"test: {res} | __name__: {__name__}")
 
+# if __name__ == "__main__":
+#     main()
 
-def main():
-    res = test(1, 2)
-    print(f"test: {res} | __name__: {__name__}")
+# x = abs(-13)
+# print(x)
 
-if __name__ == "__main__":
-    main()
 
