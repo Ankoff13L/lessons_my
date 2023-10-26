@@ -9,19 +9,20 @@ import requests
 # print(r.json())
 # print(r)
 
-response = requests.get("https://httpbin.org/get")
+# response = requests.get("https://httpbin.org/get")
 
 # if response.status_code == 200:
 #     print("OK!")
 
-if response.ok:
-    print("OK!")
+# if response.ok:
+#     print("OK!")
 
 # response.raise_for_status()
 
-print(response)
+# print(response)
 
- 
+payload = {'key1': 'value1', 'key2': ['value2', 'value3']}
+response = requests.get("https://httpbin.org/get", params=payload)
 
-
+print(response.url)
 
