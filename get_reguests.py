@@ -54,5 +54,17 @@ import requests
 
 # print(r)
 
+# r = requests.get("https://httpbin.org/get")
+# r.status_code
+# r.status_code == requests.codes.ok
+# r = requests.codes.ok
+# print(r)
+
+
+bad_r = requests.get("https://httpbin.org/status/404")
+bad_r.status_code
+
+print(bad_r)
+
 
 
