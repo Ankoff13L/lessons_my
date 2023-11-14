@@ -38,7 +38,8 @@ import requests
 # print(response.content)
 # print(response.text)
 # print(response.json)
-# r = response.json
+# r = response.json()
+# print(r)
 
 # print(response.raise_for_status)
 # print(response.status_code)
@@ -54,25 +55,25 @@ import requests
 
 # print(r)
 
-# r = requests.get("https://httpbin.org/get")
+r = requests.get("https://httpbin.org/get")
 # r.status_code
 # r.status_code == requests.codes.ok
 # r = requests.codes.ok
-# print(r)
-
+print(r.headers)
 
 # bad_r = requests.get("https://httpbin.org/status/404")
 # bad_r.status_code
 
 # print(bad_r)
-headers = {
-    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0",
-    }
+# headers = {
+#     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0",
+#     }
 
 # response = requests.get('https://httpbin.org/headers', headers=headers)
-response = requests.get('https://httpbin.org/headers')
+# response = requests.get('https://httpbin.org/headers')
 
-print(response.text)
+# print(response.text)
 # print(response.json())
+
 
 
