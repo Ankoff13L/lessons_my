@@ -54,12 +54,12 @@ from bs4 import BeautifulSoup
 """Из Python2day"""
 
 
-with open("index.html") as file:
-    src = file.read()
+# with open("index.html") as file:
+#     src = file.read()
 
 # print(src)
 
-soup = BeautifulSoup(src, "lxml")
+# soup = BeautifulSoup(src, "lxml")
 
 # title = soup.title
 # print(title)
@@ -68,10 +68,16 @@ soup = BeautifulSoup(src, "lxml")
 
 "методы find() и find_all()"
 
-page_h1 = soup.find("h1")
-print(page_h1)
-print(page_h1.text)
+# page_h1 = soup.find("h1")
+# print(page_h1)
+# print(page_h1.text)
 
 
+tag = BeautifulSoup('<b id="boldest">bold</b>', 'html.parser').b
+
+class_is_multi= { '*' : 'class'}
+xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
+xml_soup.p['class']
+# ['body', 'strikeout']
 
 
