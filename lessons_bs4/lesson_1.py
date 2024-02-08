@@ -1,47 +1,45 @@
 # pip3 install beautifulsoup4 lxml
 from bs4 import BeautifulSoup
 
-# """Передача открытого объекта файла"""
-# with open("index.html") as fp:
-#     soup = BeautifulSoup(fp, 'html.parser')
-
-# """Передача строки"""
-# soup = BeautifulSoup("<html>a web page</html>", 'html.parser')
 
 
-# # html_doc = """<html><head><title>The Dormouse's story</title></head>
-# <body>
-# <p class="title"><b>The Dormouse's story</b></p>
+# tag = BeautifulSoup('<b id="boldest">bold</b>', 'html.parser').b
+# tag['id'] = 'verybold'
+# tag['another-attribute'] = 1
 
-# <p class="story">Once upon a time there were three little sisters; and their names were
-# <a href="http://example.com/elsie" class="sister" id="link1">Elsie</a>,
-# <a href="http://example.com/lacie" class="sister" id="link2">Lacie</a> and
-# <a href="http://example.com/tillie" class="sister" id="link3">Tillie</a>;
-# and they lived at the bottom of a well.</p>
+# del tag['id']
+# del tag['another-attribute']
 
-# <p class="story">...</p>
-# """
+# print(tag)
+
+# css_soup = BeautifulSoup('<p class="body strikeout"></p>', 'html.parser')
+# print(css_soup.p['class'])
+
+# id_soup = BeautifulSoup('<p id="my id"></p>', 'html.parser')
+# # print(id_soup.p['id'])
+# print(id_soup.p.get_attribute_list('id'))
 
 
-# soup = BeautifulSoup(html_doc, 'html.parser')
+# rel_soup = BeautifulSoup('<p>Back to the <a rel="index first">homepage</a></p>', 'html.parser')
+# print(rel_soup.a['rel'])
 
-# print(soup.prettify())
+# rel_soup.a['rel'] = ['index', 'contents']
+# print(rel_soup.p)
 
-# print(soup.title)
-# print(soup.title.name)
-# print(soup.title.string)
+# no_list_soup = BeautifulSoup('<p class="body strikeout"></p>', 'html.parser', multi_valued_attributes=None)
+# print(no_list_soup.p['class'])
 
-# print(soup.a)
-# print(soup.a.name)
-# print(soup.a.string)
-# print(soup.a.parent.name)
-# print(soup.find_all('a'))
-# print(soup.find(id='link3'))
+# xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml')
+# print(xml_soup.p['class'])
+
+class_is_multi= { '*' : 'class'}
+xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
+print(xml_soup.p['class'])
 
 
 
-# print(soup.p)
-# print(soup.p['class'])
+
+
 
 """Найти и извлечь все URL-адреса"""
 # for link in soup.find_all('a'):
@@ -73,11 +71,11 @@ from bs4 import BeautifulSoup
 # print(page_h1.text)
 
 
-tag = BeautifulSoup('<b id="boldest">bold</b>', 'html.parser').b
+# tag = BeautifulSoup('<b id="boldest">bold</b>', 'html.parser').b
 
-class_is_multi= { '*' : 'class'}
-xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
-xml_soup.p['class']
+# class_is_multi= { '*' : 'class'}
+# xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
+# xml_soup.p['class']
 # ['body', 'strikeout']
 
 
