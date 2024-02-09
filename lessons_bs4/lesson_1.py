@@ -32,9 +32,14 @@ from bs4 import BeautifulSoup
 # xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml')
 # print(xml_soup.p['class'])
 
-class_is_multi= { '*' : 'class'}
-xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
-print(xml_soup.p['class'])
+# class_is_multi= { '*' : 'class'}
+# xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
+# print(xml_soup.p['class'])
+
+soup = BeautifulSoup('<b class="boldest">Extremely bold</b>', 'html.parser')
+tag = soup.b
+print(tag.string)
+print(type(tag.string))
 
 
 
