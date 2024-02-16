@@ -36,10 +36,28 @@ from bs4 import BeautifulSoup
 # xml_soup = BeautifulSoup('<p class="body strikeout"></p>', 'xml', multi_valued_attributes=class_is_multi)
 # print(xml_soup.p['class'])
 
-soup = BeautifulSoup('<b class="boldest">Extremely bold</b>', 'html.parser')
-tag = soup.b
-print(tag.string)
-print(type(tag.string))
+# soup = BeautifulSoup('<b class="boldest">Extremely bold</b>', 'html.parser')
+# tag = soup.b
+# print(tag.string)
+# print(type(tag.string))
+
+
+markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
+soup = BeautifulSoup(markup, 'html.parser')
+# Применяем атрибут string для извлечения строкового содержания тега 'b'
+comment = soup.b.string
+print(comment)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
