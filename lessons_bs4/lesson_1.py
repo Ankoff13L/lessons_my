@@ -42,24 +42,13 @@ from bs4 import BeautifulSoup
 # print(type(tag.string))
 
 
-markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
-soup = BeautifulSoup(markup, 'html.parser')
-# Применяем атрибут string для извлечения строкового содержания тега 'b'
-comment = soup.b.string
-print(comment)
-
-
-
-
-
-
-
-
-
-
-
-
-
+# markup = "<b><!--Hey, buddy. Want to buy a used parser?--></b>"
+# soup = BeautifulSoup(markup, 'html.parser')
+# # Применяем атрибут string для извлечения строкового содержания тега 'b'
+# comment = soup.b.string
+# print(comment)
+# # Проверяем тип объекта Сomment
+# print(type(comment))
 
 
 
