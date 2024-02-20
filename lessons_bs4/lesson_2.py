@@ -15,9 +15,21 @@ and they lived at the bottom of a well.</p>
 """
 
 soup = BeautifulSoup(html_doc, 'html.parser')
+html_tag = soup.html
 
-for string in soup.stripped_strings:
-    print(repr(string))
+print(soup.parent)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
