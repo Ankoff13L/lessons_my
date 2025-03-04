@@ -1,11 +1,41 @@
+# numbers = [1, 2, 3]
+# min_len = 1
+
+# for num in numbers:
+#     if num == min_len:
+#         print(f'num: {num}')
+#         break
+# else:
+#     print(f'Finish...')
 
 
-def modify(x, y):
-    x += 1       # Создается новый объект (не влияет на исходный x)
-    y.append(4)  # Изменяет исходный список
+# numbers = [1, 2, 3]
+# min_len = 1
 
-num = 10
-numbers = [1, 2, 3]
-modify(num, numbers)
-print(num)     # 10 (не изменился)
-print(numbers) # [1, 2, 3, 4] (изменился)
+# for num in numbers:
+#     if num == min_len:
+#         print(f'num: {num}')
+#         # break
+# else:
+#     print(f'Finish...')
+
+
+# numbers = 0
+
+# try:
+#     10 / numbers
+# except ZeroDivisionError:
+#     print("Oops..")
+# else:
+#     print(f'{numbers = }')
+# finally:
+#     print("Program finished..")
+
+
+a = 3
+b = eval('a + 2')
+print('b = ', b)
+
+exec('c = a ** 2')
+print('c is', c)
+
