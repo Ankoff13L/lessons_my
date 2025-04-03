@@ -64,10 +64,16 @@
 # print(m)
 
 
-a = [10, 23, 8, 17, 'hello', 'cat', 'dog', 45, [1, 2, 3]]
+# a = [10, 23, 8, 17, 'hello', 'cat', 'dog', 45, [1, 2, 3]]
 
-print(len(a))
-print(len('hello'))
+# print(len(a))
+# print(len('hello'))
+
+
+for num in "раз" 'два', 8, 12:
+    print("hello world")
+
+
 
 
 
