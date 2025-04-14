@@ -89,8 +89,11 @@
 #               enumerate()   # ("перечислить") - позволяет получмть индекс и элемент одновременно
 
 
-for index, value in enumerate(["a", "b", "c"]):
-        print(index, value)
+
+
+
+# for index, value in enumerate(["a", "b", "c"]):
+#         print(index, value)
 
 
 
@@ -107,13 +110,19 @@ for index, value in enumerate(["a", "b", "c"]):
 
 
 # Для словарей можно перебирать ключи, значения или пары:
-d = {"a": 1, "b": 2}
+# d = {"a": 1, "b": 2}
 # for key in d:                 # ключи
 #     print(key)
 
 # for value in d.values():      # значения
 #     print(value)
     
-for key, value in d.items():  # пары
-    print(key, value)
+# for key, value in d.items():  # пары
+#     print(key, value)
 
+# for num in range(5):
+#     print(num)
+
+fruits = ["apple", "banana", "cherry"]
+for index,fruit in enumerate(fruits):
+    print(index,fruit)  
