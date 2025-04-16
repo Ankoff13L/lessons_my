@@ -62,6 +62,9 @@
 #         m = num
 
 # print(m)
+# m.__str__()
+
+
 
 
 # a = [10, 23, 8, 17, 'hello', 'cat', 'dog', 45, [1, 2, 3]]
@@ -70,7 +73,7 @@
 # print(len('hello'))
 
 
-# for num in "раз" 'два', 8, 12:
+# for num in "раз", "два", 8, 12:
 #     print("hello world")
 
 
@@ -123,6 +126,25 @@
 # for num in range(5):
 #     print(num)
 
-fruits = ["apple", "banana", "cherry"]
-for index,fruit in enumerate(fruits):
-    print(index,fruit)  
+# fruits = ["apple", "banana", "cherry"]
+# for index,fruit in enumerate(fruits):
+#     print(index,fruit)  
+
+
+# m = 0
+# for num in [1, 4, 13, 18, 24, 7, 10]:
+#     if num % 2 == 0 and num > m:
+#         m = num
+
+# print(m)
+
+# import add_main
+
+# result = add_main.add(10, 5)
+# print(f'Сумма: {result}')
+
+# print(__name__)
+
+# a = 3
+# b = 4
+# print(a.__add__(b))
