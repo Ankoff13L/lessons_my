@@ -36,12 +36,12 @@
 #     print(x) # в данном случае печатает значение каждой временной переменной 'x'
 
 
-k = 0
-for i in range(100):
-    if i > 70:
-        k += 1
+# k = 0
+# for i in range(100):
+#     if i > 70:
+#         k += 1
     
-print(k) 
+# print(k) 
 
 
 # # Цикл для подсчёта суммы чётных чисел
@@ -145,4 +145,9 @@ print(k)
 #         print(s, k)
 
 
-        
+a = []
+n = int(input())
+for i in range(n):
+    a.append(int(input()))
+print(a)
+
