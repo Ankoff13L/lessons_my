@@ -343,7 +343,7 @@
 # print(a)
 
 
-import random
+# import random
 
 a = [x + random.randint(1, 10) for x in [10, 12, 17]]
 print(a)
