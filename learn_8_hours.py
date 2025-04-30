@@ -332,6 +332,35 @@
 # print(f'Количество комбинаций: {sum}') 
 
 
+# """Подобрать забытый код для старого замка из комбинаций 3-х значных цифр.
+# Порядок проверки: сначала верхний треугольник, затем нижний"""
+
+# sum = 0
+# for x in [153, 315, 531, 135, 351, 531]:
+#     for y in [579, 795, 957, 597, 759, 975]:
+#         print(f'({x}:{y})', end="   ")
+#         sum += 1
+#     print()
+
+
+# print(f'Количество комбинаций: {sum}')
+# print()
+
+# """Таже история только наоборот: сначала нижний треугольник, потом верхний"""
+
+# sum = 0
+# for x in [579, 795, 957, 597, 759, 975]:
+#     for y in [153, 315, 531, 135, 351, 531]:
+#         print(f'({x}:{y})', end="   ")
+#         sum += 1
+#     print()
+
+# print(f'Количество комбинаций: {sum}')
+# print()
+
+
+
+
 # for x in range(10):
 #     for y in range(10):
 #         print(f'({x}:{y})', end="  ")
@@ -361,16 +390,16 @@
 
 
 
-def count_divisors(n):
-    k = 0
-    for i in range(1, n+1):
-        if n % i == 0:
-            k += 1
-    return k
+# def count_divisors(n):
+#     k = 0
+#     for i in range(1, n+1):
+#         if n % i == 0:
+#             k += 1
+#     return k
 
-for b in range(1, 10):
-    if count_divisors(b) == 2:
-        print(b)
+# for b in range(1, 10):
+#     if count_divisors(b) == 2:
+#         print(b)
 
 
 
