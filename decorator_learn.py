@@ -125,30 +125,66 @@
 # print(n2)
 
 
-from datetime import datetime
+# from datetime import datetime
 
-def logger(func):
-    def wratter(*arks, **kwarks):
-        start = datetime.now()
-        result = func(*arks, **kwarks)
-        print(datetime.now() - start)
-    return wratter    
+# def logger(func):
+#     def wratter(*arks, **kwarks):
+#         start = datetime.now()
+#         result = func(*arks, **kwarks)
+#         print(datetime.now() - start)
+#     return wratter    
 
-@logger
-def sn_1(r):
-    m = []
-    for i in range(r):
-        if i % 2 == 0:
-            m.append(i)
-    return m
+# @logger
+# def sn_1(r):
+#     m = []
+#     for i in range(r):
+#         if i % 2 == 0:
+#             m.append(i)
+#     return m
 
-@logger
-def sn_2(r):
-    m = [x for x in range(r) if x % 2 == 0]
-    return m
+# @logger
+# def sn_2(r):
+#     m = [x for x in range(r) if x % 2 == 0]
+#     return m
 
-sn_1 = sn_1(100_000)
-sn_2 = sn_2(100_000)
+# sn_1 = sn_1(100_000)
+# sn_2 = sn_2(100_000)
 
 # print(sn_1())
 # print(sn_2())
+
+
+# из видео: Декоратор Python/Всё что нужно знать на собесе
+
+def deco_2(func):
+        def wrapper(*args, **kwargs):       # 1 выполняется этот код
+            print("deco_2 before")          # 1 выполняется этот код
+            result = func(*args, **kwargs)  # 2 выполняется этот код
+            print("deco_2 after")           # 4 выполняется этот код
+            return result
+
+        return wrapper
+
+
+def deco(func):
+        def wrapper(*args, **kwargs):
+            print("deco before")            # 3 выполняется этот код
+            result = func(*args, **kwargs)  # 3 выполняется этот код
+            print("deco after")             # 3 выполняется этот код
+            return result                   # 3 выполняется этот код
+
+        return wrapper
+
+@deco                 # заменяет код 'summator = deco(summator)'
+def summator(a, b):
+    return a + b
+
+@deco_2
+@deco                 # заменяет код 'square = deco(square)'
+def square(a):
+    print('functional calling')
+    return a * a
+
+print(square(1))
+
+# Сначала выполнится наружная функция 'deco_2'
