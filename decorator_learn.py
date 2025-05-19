@@ -156,35 +156,35 @@
 
 # из видео: Декоратор Python/Всё что нужно знать на собесе
 
-def deco_2(func):
-        def wrapper(*args, **kwargs):       # 1 выполняется этот код
-            print("deco_2 before")          # 1 выполняется этот код
-            result = func(*args, **kwargs)  # 2 выполняется этот код
-            print("deco_2 after")           # 4 выполняется этот код
-            return result
+# def deco_2(func):
+#         def wrapper(*args, **kwargs):       # 1 выполняется этот код
+#             print("deco_2 before")          # 1 выполняется этот код
+#             result = func(*args, **kwargs)  # 2 выполняется этот код
+#             print("deco_2 after")           # 4 выполняется этот код
+#             return result
 
-        return wrapper
+#         return wrapper
 
 
-def deco(func):
-        def wrapper(*args, **kwargs):
-            print("deco before")            # 3 выполняется этот код
-            result = func(*args, **kwargs)  # 3 выполняется этот код
-            print("deco after")             # 3 выполняется этот код
-            return result                   # 3 выполняется этот код
+# def deco(func):
+#         def wrapper(*args, **kwargs):
+#             print("deco before")            # 3 выполняется этот код
+#             result = func(*args, **kwargs)  # 3 выполняется этот код
+#             print("deco after")             # 3 выполняется этот код
+#             return result                   # 3 выполняется этот код
 
-        return wrapper
+#         return wrapper
 
-@deco                 # заменяет код 'summator = deco(summator)'
-def summator(a, b):
-    return a + b
+# @deco                 # заменяет код 'summator = deco(summator)'
+# def summator(a, b):
+#     return a + b
 
-@deco_2
-@deco                 # заменяет код 'square = deco(square)'
-def square(a):
-    print('functional calling')
-    return a * a
+# @deco_2
+# @deco                 # заменяет код 'square = deco(square)'
+# def square(a):
+#     print('functional calling')
+#     return a * a
 
-print(square(1))
+# print(square(1))
 
 # Сначала выполнится наружная функция 'deco_2'
